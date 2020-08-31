@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499B324FD826100BF0CB6 /* PickerViewController.swift */; };
+		FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0B822F24FDA4700073D146 /* Assets.xcassets */; };
+		FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B823124FDB4010073D146 /* PickerViewData.swift */; };
 		FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294924F96F2E008A7643 /* AppDelegate.swift */; };
 		FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294B24F96F2E008A7643 /* SceneDelegate.swift */; };
 		FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294D24F96F2E008A7643 /* ViewController.swift */; };
 		FE78295124F96F2E008A7643 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE78294F24F96F2E008A7643 /* Main.storyboard */; };
-		FE78295324F96F30008A7643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE78295224F96F30008A7643 /* Assets.xcassets */; };
 		FE78295624F96F30008A7643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE78295424F96F30008A7643 /* LaunchScreen.storyboard */; };
 		FE78296124F96F30008A7643 /* DrinkGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78296024F96F30008A7643 /* DrinkGameTests.swift */; };
 		FE78296C24F96F30008A7643 /* DrinkGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78296B24F96F30008A7643 /* DrinkGameUITests.swift */; };
@@ -39,12 +40,13 @@
 
 /* Begin PBXFileReference section */
 		663499B324FD826100BF0CB6 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		FE0B822F24FDA4700073D146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE0B823124FDB4010073D146 /* PickerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewData.swift; sourceTree = "<group>"; };
 		FE78294624F96F2E008A7643 /* DrinkGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE78294924F96F2E008A7643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE78294B24F96F2E008A7643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FE78294D24F96F2E008A7643 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE78295024F96F2E008A7643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE78295224F96F30008A7643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE78295524F96F30008A7643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE78295724F96F30008A7643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE78295C24F96F30008A7643 /* DrinkGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrinkGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,10 +114,11 @@
 				FE78294B24F96F2E008A7643 /* SceneDelegate.swift */,
 				FE78294D24F96F2E008A7643 /* ViewController.swift */,
 				FE78294F24F96F2E008A7643 /* Main.storyboard */,
-				FE78295224F96F30008A7643 /* Assets.xcassets */,
+				FE0B822F24FDA4700073D146 /* Assets.xcassets */,
 				FE78295424F96F30008A7643 /* LaunchScreen.storyboard */,
 				663499B324FD826100BF0CB6 /* PickerViewController.swift */,
 				FE78295724F96F30008A7643 /* Info.plist */,
+				FE0B823124FDB4010073D146 /* PickerViewData.swift */,
 			);
 			path = DrinkGame;
 			sourceTree = "<group>";
@@ -253,9 +256,9 @@
 			files = (
 				FE78297E24F97733008A7643 /* budmo jiggler.ttf in Resources */,
 				FE78295624F96F30008A7643 /* LaunchScreen.storyboard in Resources */,
-				FE78295324F96F30008A7643 /* Assets.xcassets in Resources */,
 				FE78295124F96F2E008A7643 /* Main.storyboard in Resources */,
 				FE78298024F97733008A7643 /* budmo jigglish.ttf in Resources */,
+				FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */,
+				FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */,
 				FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */,
 				663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */,
 				FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */,
