@@ -17,6 +17,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="jCX-7I-EBT" kind="show" id="arR-hf-7jh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,22 +30,26 @@
             <objects>
                 <viewController id="jCX-7I-EBT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1GK-7i-SEq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="O2F-A0-TiN"/>
                     </view>
+                    <navigationItem key="navigationItem" id="YCb-XD-y6t"/>
+                    <connections>
+                        <segue destination="tCi-Aa-XEC" kind="show" id="Fxi-b0-V32"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1v-KJ-qoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1033" y="143"/>
         </scene>
-        <!--View Controller-->
+        <!--Picker View Controller-->
         <scene sceneID="LE6-bl-cY5">
             <objects>
-                <viewController id="tCi-Aa-XEC" sceneMemberID="viewController">
+                <viewController id="tCi-Aa-XEC" customClass="PickerViewController" customModule="DrinkGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cN9-rF-CiZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPy-Px-nDg">
@@ -57,6 +64,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="5k8-nU-8fT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HzC-7Z-7yv"/>
+                    <connections>
+                        <outlet property="PickerMusic" destination="yMw-mm-YTb" id="wNo-Zs-O8y"/>
+                        <segue destination="e9C-6Q-rCk" kind="show" id="2we-F0-pAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q96-Wu-41i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,11 +79,12 @@
             <objects>
                 <viewController id="e9C-6Q-rCk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TFm-4k-rcx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="keP-KX-p0V"/>
                     </view>
+                    <navigationItem key="navigationItem" id="siD-lQ-pHu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6M-kL-EK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

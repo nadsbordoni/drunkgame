@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		663499B024FD7B3600BF0CB6 /* TelaPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499AF24FD7B3600BF0CB6 /* TelaPickerView.swift */; };
+		663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499B324FD826100BF0CB6 /* PickerViewController.swift */; };
 		FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294924F96F2E008A7643 /* AppDelegate.swift */; };
 		FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294B24F96F2E008A7643 /* SceneDelegate.swift */; };
 		FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294D24F96F2E008A7643 /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		663499AF24FD7B3600BF0CB6 /* TelaPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelaPickerView.swift; sourceTree = "<group>"; };
+		663499B324FD826100BF0CB6 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		FE78294624F96F2E008A7643 /* DrinkGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE78294924F96F2E008A7643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE78294B24F96F2E008A7643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,8 +113,8 @@
 				FE78294D24F96F2E008A7643 /* ViewController.swift */,
 				FE78294F24F96F2E008A7643 /* Main.storyboard */,
 				FE78295224F96F30008A7643 /* Assets.xcassets */,
-				663499AF24FD7B3600BF0CB6 /* TelaPickerView.swift */,
 				FE78295424F96F30008A7643 /* LaunchScreen.storyboard */,
+				663499B324FD826100BF0CB6 /* PickerViewController.swift */,
 				FE78295724F96F30008A7643 /* Info.plist */,
 			);
 			path = DrinkGame;
@@ -282,7 +282,7 @@
 			files = (
 				FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */,
 				FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */,
-				663499B024FD7B3600BF0CB6 /* TelaPickerView.swift in Sources */,
+				663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */,
 				FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
