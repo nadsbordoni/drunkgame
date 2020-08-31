@@ -11,6 +11,15 @@ import UIKit
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
         
         var music: [String] = []
+//        var component1 = [Int]()
+    
+    func randomNumber(num: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(num)))
+    }
+    
+    func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
     
         func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             return music[row]
@@ -28,6 +37,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
