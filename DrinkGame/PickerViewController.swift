@@ -10,6 +10,12 @@ import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet var startButtonOutlet: UIButton!
+    @IBOutlet var shameButtonOutlet: UIButton!
+    @IBOutlet var doneButtonOutlet: UIButton!
+    @IBOutlet var PickerMusic: UIPickerView!
+    @IBOutlet var PickerActions: UIPickerView!
+    
     func randomNumber(num: Int) -> Int {
         return Int(arc4random_uniform(UInt32(num)))
     }
@@ -45,16 +51,29 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        shameButtonOutlet.isHidden = true
+        doneButtonOutlet.isHidden = true
         PickerMusic.dataSource = self
         PickerMusic.delegate = self
         PickerActions.delegate = self
         PickerActions.dataSource = self
     }
     
-    @IBOutlet var PickerMusic: UIPickerView!
+   
     
-    @IBOutlet var PickerActions: UIPickerView!
+    @IBAction func pressStart() {
+        startButtonOutlet.isHidden = true
+        shameButtonOutlet.isHidden = false
+        doneButtonOutlet.isHidden = false
+        
+        PickerMusic.selectRow(randomNumber(num: Pickerdata.music.count), inComponent: 0, animated: true)
+        PickerActions.selectRow(randomNumber(num: Pickerdata.action.count), inComponent: 0, animated: true)
+    }
+    @IBAction func pressDone() {
+        startButtonOutlet.isHidden = false
+        doneButtonOutlet.isHidden = true
+        shameButtonOutlet.isHidden = true
+    }
     /*
      // MARK: - Navigation
      
