@@ -9,9 +9,6 @@
 import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-        
-        var music: [String] = []
-//        var component1 = [Int]()
     
     func randomNumber(num: Int) -> Int {
         return Int(arc4random_uniform(UInt32(num)))
@@ -21,37 +18,51 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return UIStatusBarStyle.lightContent
     }
     
-        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-            return music[row]
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == PickerMusic{
+             return Pickerdata.music[row]
+        }
+        else {
+            return Pickerdata.action[row]
         }
         
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        music.count
+         if pickerView == PickerMusic{
+            return Pickerdata.music.count
+               }
+               else {
+            return Pickerdata.action.count
+               }
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Do any additional setup after loading the view.
+        PickerMusic.dataSource = self
+        PickerMusic.delegate = self
+        PickerActions.delegate = self
+        PickerActions.dataSource = self
     }
     
     @IBOutlet var PickerMusic: UIPickerView!
     
+    @IBOutlet var PickerActions: UIPickerView!
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

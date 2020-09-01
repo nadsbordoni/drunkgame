@@ -12,5 +12,5 @@ import UIKit
 struct Pickerdata {
     static let action = ["Come farofa", "Faz ode à batata", "Pula como Saci", "Alisa a barriga", "Faz o quatro", "Planta bananeira", "Imita personalidade famosa", "Faz quadradinho de oito", ""]
     
-    static let music = [""]
+    static let music = ["a","b","c"]
 }

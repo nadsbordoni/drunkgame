@@ -195,6 +195,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HzC-7Z-7yv"/>
                     <connections>
+                        <outlet property="PickerActions" destination="sPy-Px-nDg" id="OKM-4B-QD7"/>
                         <outlet property="PickerMusic" destination="yMw-mm-YTb" id="wNo-Zs-O8y"/>
                     </connections>
                 </viewController>
