@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Market_Deco.ttf">
+            <string>MarketDeco</string>
+        </array>
         <array key="budmo jigglish.ttf">
             <string>BudmoJigglish-Regular</string>
         </array>
@@ -51,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="142.63392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Players View Controller-->
         <scene sceneID="gH0-2a-sru">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="jCX-7I-EBT" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="jCX-7I-EBT" customClass="PlayersViewController" customModule="DrinkGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1GK-7i-SEq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,32 +78,40 @@
                                 <rect key="frame" x="148" y="724" width="118" height="68"/>
                                 <state key="normal" image="go"/>
                                 <connections>
+                                    <action selector="pressGo" destination="jCX-7I-EBT" eventType="touchUpInside" id="NzZ-dR-eYY"/>
                                     <segue destination="tCi-Aa-XEC" kind="show" id="hLh-AQ-jqL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVr-M9-Jcj">
-                                <rect key="frame" x="27" y="44" width="36" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="et9-mP-o22"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Player's name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJH-kt-vLa">
+                                <rect key="frame" x="27" y="260" width="360" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="HoV-o5-48G"/>
+                                </constraints>
+                                <color key="textColor" red="0.76862745099999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="126" id="2m0-th-h7Q"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="top" secondItem="O2F-A0-TiN" secondAttribute="top" constant="64" id="CYb-ze-VYU"/>
+                            <constraint firstItem="QJH-kt-vLa" firstAttribute="top" secondItem="1GK-7i-SEq" secondAttribute="top" constant="260" id="RX8-J1-Dx8"/>
+                            <constraint firstItem="QJH-kt-vLa" firstAttribute="centerX" secondItem="Pgc-Do-G8e" secondAttribute="centerX" id="SD2-4S-UGM"/>
                             <constraint firstItem="O2F-A0-TiN" firstAttribute="bottom" secondItem="FdG-u6-RYr" secondAttribute="bottom" constant="70" id="VlJ-cO-hZi"/>
                             <constraint firstItem="XT8-78-tsm" firstAttribute="centerY" secondItem="1GK-7i-SEq" secondAttribute="centerY" id="dRC-St-fHj"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="1GK-7i-SEq" secondAttribute="centerX" id="gnX-y0-CwJ"/>
                             <constraint firstItem="FdG-u6-RYr" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="148" id="gu6-kk-VPv"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="XT8-78-tsm" secondAttribute="centerX" id="iQn-ui-clH"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="FdG-u6-RYr" secondAttribute="centerX" id="mfL-wT-Hfy"/>
+                            <constraint firstItem="QJH-kt-vLa" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="27" id="y5G-9v-acq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O2F-A0-TiN"/>
                     </view>
                     <navigationItem key="navigationItem" id="YCb-XD-y6t"/>
+                    <connections>
+                        <outlet property="textField" destination="QJH-kt-vLa" id="gEN-KC-N25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1v-KJ-qoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,18 +242,18 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFX-ZF-8aE">
-                                <rect key="frame" x="59" y="247" width="296" height="296"/>
+                                <rect key="frame" x="59" y="218" width="296" height="296"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="296" id="H8B-88-XZM"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moldura foto" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-mA-odQ">
-                                <rect key="frame" x="35.5" y="222" width="343" height="346"/>
+                                <rect key="frame" x="35.5" y="194" width="343" height="346"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nome do drink" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-vl-4dT">
-                                <rect key="frame" x="51" y="621" width="312" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-vl-4dT">
+                                <rect key="frame" x="24" y="593" width="367" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="Uwc-2P-sC0"/>
+                                    <constraint firstAttribute="height" constant="110" id="Uwc-2P-sC0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BudmoJigglish-Regular" family="Budmo" pointSize="40"/>
                                 <color key="textColor" red="0.76862745099999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
@@ -252,23 +263,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rFX-ZF-8aE" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="59" id="72z-VH-48i"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="DDx-dN-RXI"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" constant="0.5" id="DDx-dN-RXI"/>
                             <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="e4o-mA-odQ" secondAttribute="bottom" constant="53" id="EiN-iK-no9"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="rFX-ZF-8aE" secondAttribute="bottom" constant="78" id="JN9-6l-OaL"/>
-                            <constraint firstItem="rFX-ZF-8aE" firstAttribute="centerY" secondItem="e4o-mA-odQ" secondAttribute="centerY" id="NIA-Kp-OIU"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="j5D-3e-T1t" secondAttribute="centerX" id="NRg-1W-svS"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="51" id="SOQ-dk-5NO"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="rFX-ZF-8aE" secondAttribute="bottom" constant="79" id="JN9-6l-OaL"/>
+                            <constraint firstItem="rFX-ZF-8aE" firstAttribute="centerY" secondItem="e4o-mA-odQ" secondAttribute="centerY" constant="-1" id="NIA-Kp-OIU"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="j5D-3e-T1t" secondAttribute="centerX" constant="0.5" id="NRg-1W-svS"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="24" id="SOQ-dk-5NO"/>
                             <constraint firstItem="j5D-3e-T1t" firstAttribute="centerY" secondItem="TFm-4k-rcx" secondAttribute="centerY" id="Vg3-mE-zbL"/>
-                            <constraint firstItem="keP-KX-p0V" firstAttribute="bottom" secondItem="iQ1-vl-4dT" secondAttribute="bottom" constant="189" id="r5Y-6g-8bB"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="TFm-4k-rcx" secondAttribute="centerX" id="rN0-Mz-Lyo"/>
+                            <constraint firstItem="keP-KX-p0V" firstAttribute="bottom" secondItem="iQ1-vl-4dT" secondAttribute="bottom" constant="159" id="r5Y-6g-8bB"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="TFm-4k-rcx" secondAttribute="centerX" constant="0.5" id="rN0-Mz-Lyo"/>
                             <constraint firstItem="j5D-3e-T1t" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="uVd-HW-Dz5"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="e4o-mA-odQ" secondAttribute="centerX" id="wqM-Vv-Fef"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="e4o-mA-odQ" secondAttribute="centerX" constant="0.5" id="wqM-Vv-Fef"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="keP-KX-p0V"/>
                     </view>
                     <navigationItem key="navigationItem" id="siD-lQ-pHu"/>
                     <connections>
-                        <outlet property="imageView" destination="e4o-mA-odQ" id="i2f-pe-H8f"/>
+                        <outlet property="imageView" destination="rFX-ZF-8aE" id="VZL-nE-M2x"/>
+                        <outlet property="label" destination="iQ1-vl-4dT" id="Rfd-f0-6bv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6M-kL-EK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -277,8 +289,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="E2c-gX-48M"/>
-        <segue reference="Q1P-xA-o2N"/>
+        <segue reference="hLh-AQ-jqL"/>
+        <segue reference="BAm-JU-Kpc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back" width="36" height="35"/>

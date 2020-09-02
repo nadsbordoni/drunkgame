@@ -10,14 +10,15 @@ import UIKit
 
 class APIViewController: UIViewController {
     
-    @IBOutlet var imageView: UIImageView!
     
+    @IBOutlet var label: UILabel!
+    @IBOutlet var imageView: UIImageView!
     var drink: [DrinkElement] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.load("https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka")
-
+        
         // Do any additional setup after loading the view.
     }
     func load(_ urlStrings:String) {
@@ -29,10 +30,19 @@ class APIViewController: UIViewController {
                 let decoder = JSONDecoder()
                 let drinkData = try decoder.decode(Drink.self, from: data!)
                 self.drink = drinkData.drinks
-                //self.tableView.reloadData()
-                let url = URL(string: self.drink[1].strDrinkThumb)
+                
+                let aleatorynumber = self.randomNumber(num: self.drink.count)
+                
+                let drinkname = self.drink[aleatorynumber].strDrink
+                let url = URL(string: self.drink[aleatorynumber].strDrinkThumb)
                 let data = try? Data(contentsOf: url!)
-                self.imageView.image = UIImage(data: data!)
+                if let data = data {
+                    DispatchQueue.main.async { // Correct
+                        self.imageView.image = UIImage(data: data)
+                        self.label.text = drinkname
+                        
+                    }
+                }
             } catch {
                 print("Erro: " + error.localizedDescription)
             }
@@ -40,15 +50,10 @@ class APIViewController: UIViewController {
         }
         task.resume()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func randomNumber(num: Int) -> Int {
+        return Int(arc4random_uniform(UInt32(num)))
     }
-    */
-
+    
+    
 }

@@ -13,6 +13,8 @@
 		663A839125001405002F9E8E /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663A839025001405002F9E8E /* backgroundMusic.mp3 */; };
 		FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0B822F24FDA4700073D146 /* Assets.xcassets */; };
 		FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B823124FDB4010073D146 /* PickerViewData.swift */; };
+		FE1A71A225003C360028025A /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A71A125003C360028025A /* Player.swift */; };
+		FE1A71A425003E000028025A /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1A71A325003E000028025A /* PlayersViewController.swift */; };
 		FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294924F96F2E008A7643 /* AppDelegate.swift */; };
 		FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294B24F96F2E008A7643 /* SceneDelegate.swift */; };
 		FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294D24F96F2E008A7643 /* ViewController.swift */; };
@@ -48,6 +50,8 @@
 		663A839025001405002F9E8E /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		FE0B822F24FDA4700073D146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE0B823124FDB4010073D146 /* PickerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewData.swift; sourceTree = "<group>"; };
+		FE1A71A125003C360028025A /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FE1A71A325003E000028025A /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		FE78294624F96F2E008A7643 /* DrinkGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE78294924F96F2E008A7643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE78294B24F96F2E008A7643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,9 +129,11 @@
 				FE0B822F24FDA4700073D146 /* Assets.xcassets */,
 				FE78295424F96F30008A7643 /* LaunchScreen.storyboard */,
 				663499B324FD826100BF0CB6 /* PickerViewController.swift */,
+				FE1A71A125003C360028025A /* Player.swift */,
 				FE78295724F96F30008A7643 /* Info.plist */,
 				FE0B823124FDB4010073D146 /* PickerViewData.swift */,
 				663A839025001405002F9E8E /* backgroundMusic.mp3 */,
+				FE1A71A325003E000028025A /* PlayersViewController.swift */,
 			);
 			path = DrinkGame;
 			sourceTree = "<group>";
@@ -297,9 +303,11 @@
 				FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */,
 				663499B824FFAF6300BF0CB6 /* DrinkViewController.swift in Sources */,
 				FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */,
+				FE1A71A225003C360028025A /* Player.swift in Sources */,
 				663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */,
 				FE78294C24F96F2E008A7643 /* SceneDelegate.swift in Sources */,
 				663499B624FEE39300BF0CB6 /* APIViewController.swift in Sources */,
+				FE1A71A425003E000028025A /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
