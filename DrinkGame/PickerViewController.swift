@@ -26,7 +26,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == PickerMusic{
-             return Pickerdata.music[row]
+            return Pickerdata.music[row]
         }
         else {
             return Pickerdata.action[row]
@@ -40,12 +40,12 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-         if pickerView == PickerMusic{
+        if pickerView == PickerMusic{
             return Pickerdata.music.count
-               }
-               else {
+        }
+        else {
             return Pickerdata.action.count
-               }
+        }
     }
     
     
@@ -59,7 +59,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         PickerActions.dataSource = self
     }
     
-   
+    let vc = ViewController()
     
     @IBAction func pressStart() {
         startButtonOutlet.isHidden = true
@@ -68,6 +68,13 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         PickerMusic.selectRow(randomNumber(num: Pickerdata.music.count), inComponent: 0, animated: true)
         PickerActions.selectRow(randomNumber(num: Pickerdata.action.count), inComponent: 0, animated: true)
+        
+        if vc.audioPlayer.isPlaying{
+            vc.audioPlayer.pause()
+        }
+        else {
+            
+        }
     }
     @IBAction func pressDone() {
         startButtonOutlet.isHidden = false
