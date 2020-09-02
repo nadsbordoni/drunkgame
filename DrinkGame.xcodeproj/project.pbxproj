@@ -10,7 +10,7 @@
 		663499B424FD826100BF0CB6 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499B324FD826100BF0CB6 /* PickerViewController.swift */; };
 		663499B624FEE39300BF0CB6 /* APIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499B524FEE39300BF0CB6 /* APIViewController.swift */; };
 		663499B824FFAF6300BF0CB6 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663499B724FFAF6300BF0CB6 /* DrinkViewController.swift */; };
-		663499BA24FFDC2F00BF0CB6 /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663499B924FFDC2F00BF0CB6 /* backgroundMusic.mp3 */; };
+		663A839125001405002F9E8E /* backgroundMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 663A839025001405002F9E8E /* backgroundMusic.mp3 */; };
 		FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0B822F24FDA4700073D146 /* Assets.xcassets */; };
 		FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0B823124FDB4010073D146 /* PickerViewData.swift */; };
 		FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78294924F96F2E008A7643 /* AppDelegate.swift */; };
@@ -45,7 +45,7 @@
 		663499B324FD826100BF0CB6 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		663499B524FEE39300BF0CB6 /* APIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIViewController.swift; sourceTree = "<group>"; };
 		663499B724FFAF6300BF0CB6 /* DrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
-		663499B924FFDC2F00BF0CB6 /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = backgroundMusic.mp3; path = ../../../../Downloads/backgroundMusic.mp3; sourceTree = "<group>"; };
+		663A839025001405002F9E8E /* backgroundMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundMusic.mp3; sourceTree = "<group>"; };
 		FE0B822F24FDA4700073D146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE0B823124FDB4010073D146 /* PickerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewData.swift; sourceTree = "<group>"; };
 		FE78294624F96F2E008A7643 /* DrinkGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,7 +127,7 @@
 				663499B324FD826100BF0CB6 /* PickerViewController.swift */,
 				FE78295724F96F30008A7643 /* Info.plist */,
 				FE0B823124FDB4010073D146 /* PickerViewData.swift */,
-				663499B924FFDC2F00BF0CB6 /* backgroundMusic.mp3 */,
+				663A839025001405002F9E8E /* backgroundMusic.mp3 */,
 			);
 			path = DrinkGame;
 			sourceTree = "<group>";
@@ -263,9 +263,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				663499BA24FFDC2F00BF0CB6 /* backgroundMusic.mp3 in Resources */,
 				FE78297E24F97733008A7643 /* budmo jiggler.ttf in Resources */,
 				FE78295624F96F30008A7643 /* LaunchScreen.storyboard in Resources */,
+				663A839125001405002F9E8E /* backgroundMusic.mp3 in Resources */,
 				FE78295124F96F2E008A7643 /* Main.storyboard in Resources */,
 				FE78298024F97733008A7643 /* budmo jigglish.ttf in Resources */,
 				FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */,
