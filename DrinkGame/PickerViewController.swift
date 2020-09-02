@@ -80,6 +80,12 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         startButtonOutlet.isHidden = false
         doneButtonOutlet.isHidden = true
         shameButtonOutlet.isHidden = true
+        
+        let alert = UIAlertController(title: "Alerta", message: "Antes de continuar, tente fazer o 4", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil ))
+        
+        self.present(alert, animated: true)
     }
     /*
      // MARK: - Navigation

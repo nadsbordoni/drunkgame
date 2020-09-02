@@ -10,7 +10,9 @@ import UIKit
 
 class APIViewController: UIViewController {
     
-    var drink: [Drink] = []
+    @IBOutlet var imageView: UIImageView!
+    
+    var drink: [DrinkElement] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +27,12 @@ class APIViewController: UIViewController {
             //codigo para receber os dados da resposta da requisição
             do {
                 let decoder = JSONDecoder()
-                let drinkData = try decoder.decode([Drink].self, from: data!)
-                self.drink = drinkData
+                let drinkData = try decoder.decode(Drink.self, from: data!)
+                self.drink = drinkData.drinks
                 //self.tableView.reloadData()
+                let url = URL(string: self.drink[1].strDrinkThumb)
+                let data = try? Data(contentsOf: url!)
+                self.imageView.image = UIImage(data: data!)
             } catch {
                 print("Erro: " + error.localizedDescription)
             }

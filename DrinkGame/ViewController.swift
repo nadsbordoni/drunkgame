@@ -11,9 +11,9 @@ import Foundation
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     public var audioPlayer: AVAudioPlayer = AVAudioPlayer()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,13 +21,20 @@ class ViewController: UIViewController {
             
             let bundle = Bundle.main.path(forResource: "backgroundMusic", ofType: "mp3")
             try audioPlayer = AVAudioPlayer(contentsOf: URL.init(fileURLWithPath: bundle!) as URL)
-                audioPlayer.prepareToPlay()
+            audioPlayer.prepareToPlay()
         }
         catch {
             print (error)
         }
         
         audioPlayer.play()
+        
+        
+//        let alert = UIAlertController(title: "Alerta", message: "Cuidado pra não dar pt", preferredStyle: .alert)
+//        
+//        alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil ))
+//        
+//        self.present(alert, animated: true)
     }
-
+    
 }
