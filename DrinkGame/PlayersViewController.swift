@@ -8,21 +8,30 @@
 
 import UIKit
 
-class PlayersViewController: UIViewController {
-    var players = [Player]()
-    var temporaryplayers : [String] = []
-    @IBOutlet var textField: UITextField!
+class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    //var players = [Player]()
+    //var temporaryplayers : [String] = []
+
+    @IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        tableView.register(FieldTableViewCell.nib(), forCellReuseIdentifier: FieldTableViewCell.identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    func readTextField(){
-        //colocando os nomes em uma array
-        let player = textField.text!
-        temporaryplayers.append(player)
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8
     }
+   
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let fieldCell = tableView.dequeueReusableCell(withIdentifier: FieldTableViewCell.identifier, for: indexPath) as! FieldTableViewCell 
+        return fieldCell
+    }
+//    func readTextField(){
+//
+//    }
     
     @IBAction func pressGo() {
         //salvar os nomes permanentemente como Player?

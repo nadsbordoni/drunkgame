@@ -7,9 +7,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Market_Deco.ttf">
-            <string>MarketDeco</string>
-        </array>
         <array key="budmo jigglish.ttf">
             <string>BudmoJigglish-Regular</string>
         </array>
@@ -65,7 +62,33 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicio" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-78-tsm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-Do-G8e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdG-u6-RYr">
+                                <rect key="frame" x="148" y="725" width="118" height="67"/>
+                                <state key="normal" image="go"/>
+                                <connections>
+                                    <action selector="pressGo" destination="jCX-7I-EBT" eventType="touchUpInside" id="NzZ-dR-eYY"/>
+                                    <segue destination="tCi-Aa-XEC" kind="show" id="hLh-AQ-jqL"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-tL-OlL">
+                                <rect key="frame" x="53" y="229" width="309" height="421"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9bi-fH-kHU">
+                                        <rect key="frame" x="0.0" y="28" width="309" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9bi-fH-kHU" id="wQx-uQ-sLI">
+                                            <rect key="frame" x="0.0" y="0.0" width="309" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" id="aep-3D-Nbv">
+                                <rect key="frame" x="14" y="187" width="387" height="505"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-Do-G8e">
                                 <rect key="frame" x="126" y="108" width="162" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="MKq-2i-h0V"/>
@@ -74,43 +97,28 @@
                                 <color key="textColor" red="0.76862745098039209" green="0.14117647058823529" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdG-u6-RYr">
-                                <rect key="frame" x="148" y="724" width="118" height="68"/>
-                                <state key="normal" image="go"/>
-                                <connections>
-                                    <action selector="pressGo" destination="jCX-7I-EBT" eventType="touchUpInside" id="NzZ-dR-eYY"/>
-                                    <segue destination="tCi-Aa-XEC" kind="show" id="hLh-AQ-jqL"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="line" placeholder="Player's name" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QJH-kt-vLa">
-                                <rect key="frame" x="27" y="260" width="360" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="HoV-o5-48G"/>
-                                </constraints>
-                                <color key="textColor" red="0.76862745099999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="30"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="126" id="2m0-th-h7Q"/>
+                            <constraint firstItem="ktg-tL-OlL" firstAttribute="centerY" secondItem="aep-3D-Nbv" secondAttribute="centerY" id="3RE-uT-8FG"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="top" secondItem="O2F-A0-TiN" secondAttribute="top" constant="64" id="CYb-ze-VYU"/>
-                            <constraint firstItem="QJH-kt-vLa" firstAttribute="top" secondItem="1GK-7i-SEq" secondAttribute="top" constant="260" id="RX8-J1-Dx8"/>
-                            <constraint firstItem="QJH-kt-vLa" firstAttribute="centerX" secondItem="Pgc-Do-G8e" secondAttribute="centerX" id="SD2-4S-UGM"/>
+                            <constraint firstItem="ktg-tL-OlL" firstAttribute="centerX" secondItem="aep-3D-Nbv" secondAttribute="centerX" id="Tqe-Ya-kna"/>
                             <constraint firstItem="O2F-A0-TiN" firstAttribute="bottom" secondItem="FdG-u6-RYr" secondAttribute="bottom" constant="70" id="VlJ-cO-hZi"/>
+                            <constraint firstItem="FdG-u6-RYr" firstAttribute="top" secondItem="ktg-tL-OlL" secondAttribute="bottom" constant="75" id="cbp-V7-kMd"/>
                             <constraint firstItem="XT8-78-tsm" firstAttribute="centerY" secondItem="1GK-7i-SEq" secondAttribute="centerY" id="dRC-St-fHj"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="1GK-7i-SEq" secondAttribute="centerX" id="gnX-y0-CwJ"/>
                             <constraint firstItem="FdG-u6-RYr" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="148" id="gu6-kk-VPv"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="XT8-78-tsm" secondAttribute="centerX" id="iQn-ui-clH"/>
+                            <constraint firstItem="ktg-tL-OlL" firstAttribute="top" secondItem="Pgc-Do-G8e" secondAttribute="bottom" constant="69" id="leR-4n-9jc"/>
                             <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="FdG-u6-RYr" secondAttribute="centerX" id="mfL-wT-Hfy"/>
-                            <constraint firstItem="QJH-kt-vLa" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="27" id="y5G-9v-acq"/>
+                            <constraint firstItem="ktg-tL-OlL" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="53" id="pZn-8e-xd9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O2F-A0-TiN"/>
                     </view>
                     <navigationItem key="navigationItem" id="YCb-XD-y6t"/>
                     <connections>
-                        <outlet property="textField" destination="QJH-kt-vLa" id="gEN-KC-N25"/>
+                        <outlet property="tableView" destination="ktg-tL-OlL" id="Gs0-aB-0Kq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1v-KJ-qoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -303,5 +311,6 @@
         <image name="pickerview background" width="361" height="148"/>
         <image name="shame" width="145" height="68"/>
         <image name="start" width="197" height="68"/>
+        <image name="textfield" width="1759" height="2367"/>
     </resources>
 </document>
