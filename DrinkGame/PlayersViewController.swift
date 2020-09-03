@@ -8,34 +8,52 @@
 
 import UIKit
 
-class PlayersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-    //var players = [Player]()
-    //var temporaryplayers : [String] = []
-
-    @IBOutlet var tableView: UITableView!
+class PlayersViewController: UIViewController{
     
+    @IBOutlet var playerOne: UITextField!
+    @IBOutlet var playerTwo: UITextField!
+    @IBOutlet var playerThree: UITextField!
+    @IBOutlet var playerFour: UITextField!
+    @IBOutlet var playerFive: UITextField!
+    @IBOutlet var playerSix: UITextField!
+    @IBOutlet var playerSeven: UITextField!
+    @IBOutlet var playerEight: UITextField!
+    //var players = [Player]()
+    var names: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(FieldTableViewCell.nib(), forCellReuseIdentifier: FieldTableViewCell.identifier)
-        tableView.delegate = self
-        tableView.dataSource = self
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        playerOne.resignFirstResponder()
+        playerTwo.resignFirstResponder()
+        playerThree.resignFirstResponder()
+        playerFour.resignFirstResponder()
+        playerFive.resignFirstResponder()
+        playerSix.resignFirstResponder()
+        playerSeven.resignFirstResponder()
+        playerEight.resignFirstResponder()
     }
-   
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let fieldCell = tableView.dequeueReusableCell(withIdentifier: FieldTableViewCell.identifier, for: indexPath) as! FieldTableViewCell 
-        return fieldCell
-    }
-//    func readTextField(){
-//
-//    }
-    
     @IBAction func pressGo() {
-        //salvar os nomes permanentemente como Player?
+        names.append(playerOne.text!)
+        names.append(playerTwo.text!)
+        names.append(playerThree.text!)
+        names.append(playerFour.text!)
+        names.append(playerFive.text!)
+        names.append(playerSix.text!)
+        names.append(playerSeven.text!)
+        names.append(playerEight.text!)
+        print(names[0])
+        print(names[1])
+        print(names[2])
     }
-    
-    
 }
+
+extension UIViewController: UITextFieldDelegate{
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        resignFirstResponder()
+        return true
+    }
+}
+
+
+

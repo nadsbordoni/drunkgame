@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Market_Deco.ttf">
+            <string>MarketDeco</string>
+        </array>
         <array key="budmo jigglish.ttf">
             <string>BudmoJigglish-Regular</string>
         </array>
@@ -62,73 +65,167 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inicio" translatesAutoresizingMaskIntoConstraints="NO" id="XT8-78-tsm">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdG-u6-RYr">
-                                <rect key="frame" x="148" y="725" width="118" height="67"/>
-                                <state key="normal" image="go"/>
-                                <connections>
-                                    <action selector="pressGo" destination="jCX-7I-EBT" eventType="touchUpInside" id="NzZ-dR-eYY"/>
-                                    <segue destination="tCi-Aa-XEC" kind="show" id="hLh-AQ-jqL"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ktg-tL-OlL">
-                                <rect key="frame" x="53" y="229" width="309" height="421"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="9bi-fH-kHU">
-                                        <rect key="frame" x="0.0" y="28" width="309" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9bi-fH-kHU" id="wQx-uQ-sLI">
-                                            <rect key="frame" x="0.0" y="0.0" width="309" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" id="aep-3D-Nbv">
-                                <rect key="frame" x="14" y="187" width="387" height="505"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-Do-G8e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PLAYERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgc-Do-G8e">
                                 <rect key="frame" x="126" y="108" width="162" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="MKq-2i-h0V"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="BudmoJigglish-Regular" family="Budmo" pointSize="40"/>
                                 <color key="textColor" red="0.76862745098039209" green="0.14117647058823529" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdG-u6-RYr">
+                                <rect key="frame" x="137" y="725" width="140" height="71"/>
+                                <state key="normal" image="go"/>
+                                <connections>
+                                    <action selector="pressGo" destination="jCX-7I-EBT" eventType="touchUpInside" id="s5N-FG-KAB"/>
+                                    <segue destination="tCi-Aa-XEC" kind="show" id="ZYe-df-yUF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqe-1S-SI1">
+                                <rect key="frame" x="57" y="237" width="296" height="402"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player One" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9C0-yv-xAw">
+                                <rect key="frame" x="59" y="248" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="7mf-3U-xdd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Two" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-pp-gVV">
+                                <rect key="frame" x="59" y="297" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="VrM-ih-Czv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Three" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ob4-Ps-PQS">
+                                <rect key="frame" x="59" y="347" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EqL-d2-gPl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Four" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-Sn-BNl">
+                                <rect key="frame" x="59" y="398" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="i0V-XK-IWN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Five" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PIU-mX-eyr">
+                                <rect key="frame" x="59" y="447" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="BDB-Cf-yj0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Six" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g8T-1Y-YEb">
+                                <rect key="frame" x="59" y="496" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Wvv-Oc-wVc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Seven" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXn-PK-fPF">
+                                <rect key="frame" x="59" y="546" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="fIl-Ox-oAb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Eight" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zbf-DB-uOE">
+                                <rect key="frame" x="59" y="594" width="296" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.88235294119999996" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Ayg-5a-jez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarketDeco" family="Market Deco" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" id="aep-3D-Nbv">
+                                <rect key="frame" x="14" y="201" width="387" height="475"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="126" id="2m0-th-h7Q"/>
-                            <constraint firstItem="ktg-tL-OlL" firstAttribute="centerY" secondItem="aep-3D-Nbv" secondAttribute="centerY" id="3RE-uT-8FG"/>
-                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="top" secondItem="O2F-A0-TiN" secondAttribute="top" constant="64" id="CYb-ze-VYU"/>
-                            <constraint firstItem="ktg-tL-OlL" firstAttribute="centerX" secondItem="aep-3D-Nbv" secondAttribute="centerX" id="Tqe-Ya-kna"/>
-                            <constraint firstItem="O2F-A0-TiN" firstAttribute="bottom" secondItem="FdG-u6-RYr" secondAttribute="bottom" constant="70" id="VlJ-cO-hZi"/>
-                            <constraint firstItem="FdG-u6-RYr" firstAttribute="top" secondItem="ktg-tL-OlL" secondAttribute="bottom" constant="75" id="cbp-V7-kMd"/>
+                            <constraint firstItem="FdG-u6-RYr" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="137" id="0Oe-RQ-lVb"/>
+                            <constraint firstItem="Xfh-Sn-BNl" firstAttribute="top" secondItem="Ob4-Ps-PQS" secondAttribute="bottom" constant="17" id="1p8-4M-Gmd"/>
+                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="126" id="2Yi-Zk-LZt"/>
+                            <constraint firstItem="PIU-mX-eyr" firstAttribute="trailing" secondItem="g8T-1Y-YEb" secondAttribute="trailing" id="4mC-xt-qLw"/>
+                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="top" secondItem="O2F-A0-TiN" secondAttribute="top" constant="64" id="5dV-bO-WHi"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="59" id="64f-9J-c7U"/>
+                            <constraint firstItem="PIU-mX-eyr" firstAttribute="leading" secondItem="g8T-1Y-YEb" secondAttribute="leading" id="661-Um-y0z"/>
+                            <constraint firstItem="Ob4-Ps-PQS" firstAttribute="trailing" secondItem="Xfh-Sn-BNl" secondAttribute="trailing" id="8L0-8r-hs0"/>
+                            <constraint firstItem="GXn-PK-fPF" firstAttribute="top" secondItem="g8T-1Y-YEb" secondAttribute="bottom" constant="16" id="9SB-Ph-1Ee"/>
+                            <constraint firstItem="Ob4-Ps-PQS" firstAttribute="leading" secondItem="Xfh-Sn-BNl" secondAttribute="leading" id="ADh-aK-Bwh"/>
+                            <constraint firstItem="PIU-mX-eyr" firstAttribute="top" secondItem="Xfh-Sn-BNl" secondAttribute="bottom" constant="15" id="ECc-xX-Lgj"/>
+                            <constraint firstItem="O2F-A0-TiN" firstAttribute="bottom" secondItem="FdG-u6-RYr" secondAttribute="bottom" constant="66" id="F8N-Ep-Dmc"/>
+                            <constraint firstItem="GXn-PK-fPF" firstAttribute="leading" secondItem="Zbf-DB-uOE" secondAttribute="leading" id="FC0-e2-X5s"/>
+                            <constraint firstItem="QeC-pp-gVV" firstAttribute="trailing" secondItem="Ob4-Ps-PQS" secondAttribute="trailing" id="FuQ-vm-I3U"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="leading" secondItem="QeC-pp-gVV" secondAttribute="leading" id="HNN-Vw-Zia"/>
+                            <constraint firstItem="g8T-1Y-YEb" firstAttribute="top" secondItem="PIU-mX-eyr" secondAttribute="bottom" constant="15" id="Ijd-JR-kA0"/>
+                            <constraint firstItem="QeC-pp-gVV" firstAttribute="top" secondItem="9C0-yv-xAw" secondAttribute="bottom" constant="15" id="JHr-Tv-8C7"/>
+                            <constraint firstItem="Zbf-DB-uOE" firstAttribute="centerX" secondItem="FdG-u6-RYr" secondAttribute="centerX" id="Keh-C1-6tD"/>
+                            <constraint firstItem="XT8-78-tsm" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" id="L4Y-hV-6Io"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="top" secondItem="1GK-7i-SEq" secondAttribute="top" constant="248" id="Mro-7w-VdE"/>
+                            <constraint firstItem="QeC-pp-gVV" firstAttribute="leading" secondItem="Ob4-Ps-PQS" secondAttribute="leading" id="OTI-hJ-kzd"/>
+                            <constraint firstItem="Ob4-Ps-PQS" firstAttribute="top" secondItem="QeC-pp-gVV" secondAttribute="bottom" constant="16" id="OWO-HQ-jEL"/>
+                            <constraint firstItem="XT8-78-tsm" firstAttribute="top" secondItem="1GK-7i-SEq" secondAttribute="top" id="P4v-iR-bqf"/>
+                            <constraint firstItem="Xfh-Sn-BNl" firstAttribute="trailing" secondItem="PIU-mX-eyr" secondAttribute="trailing" id="QcO-Pj-yv2"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="top" secondItem="Pgc-Do-G8e" secondAttribute="bottom" constant="88" id="Uw6-Ba-hNj"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="centerX" secondItem="aep-3D-Nbv" secondAttribute="centerX" id="Z8Q-jw-o9n"/>
+                            <constraint firstItem="FdG-u6-RYr" firstAttribute="top" secondItem="aep-3D-Nbv" secondAttribute="bottom" constant="49" id="aQt-fC-aPm"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="centerX" secondItem="Pgc-Do-G8e" secondAttribute="centerX" id="c4P-si-thj"/>
+                            <constraint firstItem="kqe-1S-SI1" firstAttribute="centerY" secondItem="aep-3D-Nbv" secondAttribute="centerY" id="chh-ej-Jvs"/>
+                            <constraint firstItem="9C0-yv-xAw" firstAttribute="trailing" secondItem="QeC-pp-gVV" secondAttribute="trailing" id="cvC-N6-9O4"/>
                             <constraint firstItem="XT8-78-tsm" firstAttribute="centerY" secondItem="1GK-7i-SEq" secondAttribute="centerY" id="dRC-St-fHj"/>
-                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="1GK-7i-SEq" secondAttribute="centerX" id="gnX-y0-CwJ"/>
-                            <constraint firstItem="FdG-u6-RYr" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="148" id="gu6-kk-VPv"/>
-                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="XT8-78-tsm" secondAttribute="centerX" id="iQn-ui-clH"/>
-                            <constraint firstItem="ktg-tL-OlL" firstAttribute="top" secondItem="Pgc-Do-G8e" secondAttribute="bottom" constant="69" id="leR-4n-9jc"/>
-                            <constraint firstItem="Pgc-Do-G8e" firstAttribute="centerX" secondItem="FdG-u6-RYr" secondAttribute="centerX" id="mfL-wT-Hfy"/>
-                            <constraint firstItem="ktg-tL-OlL" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="53" id="pZn-8e-xd9"/>
+                            <constraint firstAttribute="bottom" secondItem="XT8-78-tsm" secondAttribute="bottom" id="daF-FA-GwV"/>
+                            <constraint firstItem="g8T-1Y-YEb" firstAttribute="trailing" secondItem="GXn-PK-fPF" secondAttribute="trailing" id="nHR-9o-CxR"/>
+                            <constraint firstItem="kqe-1S-SI1" firstAttribute="leading" secondItem="O2F-A0-TiN" secondAttribute="leading" constant="57" id="noh-vq-7R8"/>
+                            <constraint firstItem="kqe-1S-SI1" firstAttribute="top" secondItem="Pgc-Do-G8e" secondAttribute="bottom" constant="77" id="pKz-pK-GgA"/>
+                            <constraint firstItem="GXn-PK-fPF" firstAttribute="trailing" secondItem="Zbf-DB-uOE" secondAttribute="trailing" id="rHC-DA-oCp"/>
+                            <constraint firstItem="g8T-1Y-YEb" firstAttribute="leading" secondItem="GXn-PK-fPF" secondAttribute="leading" id="rVH-If-I1z"/>
+                            <constraint firstItem="Xfh-Sn-BNl" firstAttribute="leading" secondItem="PIU-mX-eyr" secondAttribute="leading" id="sr4-ak-s8P"/>
+                            <constraint firstItem="O2F-A0-TiN" firstAttribute="trailing" secondItem="kqe-1S-SI1" secondAttribute="trailing" constant="61" id="tud-n8-a31"/>
+                            <constraint firstItem="XT8-78-tsm" firstAttribute="trailing" secondItem="O2F-A0-TiN" secondAttribute="trailing" id="vgi-LA-1sI"/>
+                            <constraint firstItem="Zbf-DB-uOE" firstAttribute="top" secondItem="GXn-PK-fPF" secondAttribute="bottom" constant="14" id="yuQ-IW-Dxe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O2F-A0-TiN"/>
                     </view>
                     <navigationItem key="navigationItem" id="YCb-XD-y6t"/>
                     <connections>
-                        <outlet property="tableView" destination="ktg-tL-OlL" id="Gs0-aB-0Kq"/>
+                        <outlet property="playerEight" destination="Zbf-DB-uOE" id="5D6-ou-8QA"/>
+                        <outlet property="playerFive" destination="PIU-mX-eyr" id="cvb-sW-OWr"/>
+                        <outlet property="playerFour" destination="Xfh-Sn-BNl" id="U95-5g-UFy"/>
+                        <outlet property="playerOne" destination="9C0-yv-xAw" id="y17-oK-VEG"/>
+                        <outlet property="playerSeven" destination="GXn-PK-fPF" id="JJa-YB-ndn"/>
+                        <outlet property="playerSix" destination="g8T-1Y-YEb" id="SAn-6M-VKJ"/>
+                        <outlet property="playerThree" destination="Ob4-Ps-PQS" id="Yyl-0s-FWP"/>
+                        <outlet property="playerTwo" destination="QeC-pp-gVV" id="uCJ-NT-TH3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1v-KJ-qoy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="142.63392857142856"/>
+            <point key="canvasLocation" x="1051" y="143"/>
         </scene>
         <!--Picker View Controller-->
         <scene sceneID="LE6-bl-cY5">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="tCi-Aa-XEC" customClass="PickerViewController" customModule="DrinkGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickerViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="tCi-Aa-XEC" customClass="PickerViewController" customModule="DrinkGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cN9-rF-CiZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +319,7 @@
                         <outlet property="PickerActions" destination="sPy-Px-nDg" id="OKM-4B-QD7"/>
                         <outlet property="PickerMusic" destination="yMw-mm-YTb" id="wNo-Zs-O8y"/>
                         <outlet property="doneButtonOutlet" destination="c4q-Bj-otJ" id="ju6-gn-wiB"/>
+                        <outlet property="labelName" destination="zml-hx-J2M" id="FG1-Uf-JxY"/>
                         <outlet property="shameButtonOutlet" destination="ayq-Nc-oCn" id="ezT-bK-jSY"/>
                         <outlet property="startButtonOutlet" destination="JA1-Hv-9Lj" id="RjX-dX-HqF"/>
                     </connections>
@@ -297,8 +395,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hLh-AQ-jqL"/>
-        <segue reference="BAm-JU-Kpc"/>
+        <segue reference="ZYe-df-yUF"/>
+        <segue reference="Q1P-xA-o2N"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back" width="36" height="35"/>

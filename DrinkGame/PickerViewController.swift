@@ -9,12 +9,14 @@
 import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
+    //let playervc = PlayersViewController()
+    var names: [String] = []
     @IBOutlet var startButtonOutlet: UIButton!
     @IBOutlet var shameButtonOutlet: UIButton!
     @IBOutlet var doneButtonOutlet: UIButton!
     @IBOutlet var PickerMusic: UIPickerView!
     @IBOutlet var PickerActions: UIPickerView!
+    @IBOutlet var labelName: UILabel!
     
     func randomNumber(num: Int) -> Int {
         return Int(arc4random_uniform(UInt32(num)))
@@ -57,6 +59,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         PickerMusic.delegate = self
         PickerActions.delegate = self
         PickerActions.dataSource = self
+        printName()
     }
     
     let vc = ViewController()
@@ -88,5 +91,9 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         self.present(alert, animated: true)
     }
     
+    func printName() {
+        //labelName.text = playervc.names[0]
+        
+    }
     
 }

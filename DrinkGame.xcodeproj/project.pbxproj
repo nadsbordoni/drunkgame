@@ -24,8 +24,6 @@
 		FE78296C24F96F30008A7643 /* DrinkGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78296B24F96F30008A7643 /* DrinkGameUITests.swift */; };
 		FE78297E24F97733008A7643 /* budmo jiggler.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE78297A24F97733008A7643 /* budmo jiggler.ttf */; };
 		FE78298024F97733008A7643 /* budmo jigglish.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE78297C24F97733008A7643 /* budmo jigglish.ttf */; };
-		FEADAB9A2500618F000D657C /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEADAB982500618F000D657C /* FieldTableViewCell.swift */; };
-		FEADAB9B2500618F000D657C /* FieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEADAB992500618F000D657C /* FieldTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +68,6 @@
 		FE78297A24F97733008A7643 /* budmo jiggler.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "budmo jiggler.ttf"; sourceTree = "<group>"; };
 		FE78297C24F97733008A7643 /* budmo jigglish.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "budmo jigglish.ttf"; sourceTree = "<group>"; };
 		FE78298224F9776E008A7643 /* Market_Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Market_Deco.ttf; sourceTree = "<group>"; };
-		FEADAB982500618F000D657C /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
-		FEADAB992500618F000D657C /* FieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +134,6 @@
 				FE0B823124FDB4010073D146 /* PickerViewData.swift */,
 				663A839025001405002F9E8E /* backgroundMusic.mp3 */,
 				FE1A71A325003E000028025A /* PlayersViewController.swift */,
-				FEADAB982500618F000D657C /* FieldTableViewCell.swift */,
-				FEADAB992500618F000D657C /* FieldTableViewCell.xib */,
 			);
 			path = DrinkGame;
 			sourceTree = "<group>";
@@ -275,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEADAB9B2500618F000D657C /* FieldTableViewCell.xib in Resources */,
 				FE78297E24F97733008A7643 /* budmo jiggler.ttf in Resources */,
 				FE78295624F96F30008A7643 /* LaunchScreen.storyboard in Resources */,
 				663A839125001405002F9E8E /* backgroundMusic.mp3 in Resources */,
@@ -308,7 +301,6 @@
 			files = (
 				FE78294E24F96F2E008A7643 /* ViewController.swift in Sources */,
 				FE0B823224FDB4010073D146 /* PickerViewData.swift in Sources */,
-				FEADAB9A2500618F000D657C /* FieldTableViewCell.swift in Sources */,
 				663499B824FFAF6300BF0CB6 /* DrinkViewController.swift in Sources */,
 				FE78294A24F96F2E008A7643 /* AppDelegate.swift in Sources */,
 				FE1A71A225003C360028025A /* Player.swift in Sources */,
