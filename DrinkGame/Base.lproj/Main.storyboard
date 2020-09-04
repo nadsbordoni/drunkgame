@@ -255,7 +255,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLORISBERTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zml-hx-J2M">
-                                <rect key="frame" x="82" y="108" width="252" height="44"/>
+                                <rect key="frame" x="82" y="108" width="252" height="47"/>
                                 <fontDescription key="fontDescription" name="BudmoJigglish-Regular" family="Budmo" pointSize="40"/>
                                 <color key="textColor" red="0.76862745099999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -273,13 +273,6 @@
                                 <state key="normal" image="done"/>
                                 <connections>
                                     <action selector="pressDone" destination="tCi-Aa-XEC" eventType="touchUpInside" id="VOa-sG-U0E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayq-Nc-oCn">
-                                <rect key="frame" x="62" y="724" width="145" height="68"/>
-                                <state key="normal" image="shame"/>
-                                <connections>
-                                    <segue destination="e9C-6Q-rCk" kind="show" id="qad-kJ-oEU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA1-Hv-9Lj">
@@ -307,12 +300,19 @@
                                     <constraint firstAttribute="height" constant="131" id="sK6-wj-q4i"/>
                                 </constraints>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayq-Nc-oCn">
+                                <rect key="frame" x="35" y="724" width="145" height="68"/>
+                                <state key="normal" image="shame"/>
+                                <connections>
+                                    <segue destination="e9C-6Q-rCk" kind="show" id="qad-kJ-oEU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5k8-nU-8fT" firstAttribute="trailing" secondItem="zml-hx-J2M" secondAttribute="trailing" constant="80" id="5R3-06-qVm"/>
                             <constraint firstItem="Pls-kF-FKv" firstAttribute="leading" secondItem="eSj-Dd-X9i" secondAttribute="leading" id="7DT-Ir-93G"/>
-                            <constraint firstItem="ayq-Nc-oCn" firstAttribute="leading" secondItem="5k8-nU-8fT" secondAttribute="leading" constant="62" id="8y7-0y-cca"/>
+                            <constraint firstItem="ayq-Nc-oCn" firstAttribute="leading" secondItem="5k8-nU-8fT" secondAttribute="leading" constant="35" id="8y7-0y-cca"/>
                             <constraint firstItem="zml-hx-J2M" firstAttribute="top" secondItem="5k8-nU-8fT" secondAttribute="top" constant="64" id="CDH-5l-fva"/>
                             <constraint firstItem="JA1-Hv-9Lj" firstAttribute="top" secondItem="ayq-Nc-oCn" secondAttribute="top" id="Cdg-7p-jbY"/>
                             <constraint firstItem="zml-hx-J2M" firstAttribute="leading" secondItem="5k8-nU-8fT" secondAttribute="leading" constant="82" id="DpY-Rf-4kN"/>
@@ -327,7 +327,7 @@
                             <constraint firstItem="JA1-Hv-9Lj" firstAttribute="leading" secondItem="5k8-nU-8fT" secondAttribute="leading" constant="109" id="hfg-Oq-wFw"/>
                             <constraint firstItem="3qk-le-SrC" firstAttribute="centerX" secondItem="sPy-Px-nDg" secondAttribute="centerX" id="j1j-yK-gyU"/>
                             <constraint firstItem="3qk-le-SrC" firstAttribute="centerY" secondItem="cN9-rF-CiZ" secondAttribute="centerY" id="jMQ-Si-PCG"/>
-                            <constraint firstItem="c4q-Bj-otJ" firstAttribute="leading" secondItem="ayq-Nc-oCn" secondAttribute="trailing" constant="26" id="jYX-1m-qi5"/>
+                            <constraint firstItem="c4q-Bj-otJ" firstAttribute="leading" secondItem="ayq-Nc-oCn" secondAttribute="trailing" constant="53" id="jYX-1m-qi5"/>
                             <constraint firstItem="eSj-Dd-X9i" firstAttribute="top" secondItem="yMw-mm-YTb" secondAttribute="bottom" constant="73" id="piD-2v-gJD"/>
                             <constraint firstItem="JA1-Hv-9Lj" firstAttribute="top" secondItem="c4q-Bj-otJ" secondAttribute="top" id="pv3-dY-wEN"/>
                             <constraint firstItem="eSj-Dd-X9i" firstAttribute="top" secondItem="Pls-kF-FKv" secondAttribute="bottom" constant="66" id="uWX-aP-JYX"/>
@@ -374,15 +374,18 @@
                                     <constraint firstAttribute="height" constant="296" id="ceg-W0-0NZ"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="moldura foto" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-mA-odQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moldura foto" translatesAutoresizingMaskIntoConstraints="NO" id="e4o-mA-odQ">
                                 <rect key="frame" x="35.5" y="203" width="343" height="346"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-vl-4dT">
-                                <rect key="frame" x="30" y="605" width="355" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="h2w-dV-Kve"/>
+                                    <constraint firstAttribute="height" constant="346" id="Q64-fy-Di7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BudmoJigglish-Regular" family="Budmo" pointSize="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ1-vl-4dT">
+                                <rect key="frame" x="20" y="605" width="374" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="fBa-bi-LRn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BudmoJigglish-Regular" family="Budmo" pointSize="35"/>
                                 <color key="textColor" red="0.76862745099999996" green="0.14117647059999999" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -390,16 +393,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rFX-ZF-8aE" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="59" id="9u0-Yu-lTz"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="BCP-4C-KAn"/>
+                            <constraint firstItem="keP-KX-p0V" firstAttribute="bottom" secondItem="iQ1-vl-4dT" secondAttribute="bottom" constant="147" id="KIs-Ut-OG5"/>
                             <constraint firstItem="j5D-3e-T1t" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="Lrc-oy-1UG"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="TFm-4k-rcx" secondAttribute="centerX" id="UI4-kd-HBE"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="30" id="WD5-gS-Hr7"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="e4o-mA-odQ" secondAttribute="bottom" constant="56" id="Xt0-Df-Qi4"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="rFX-ZF-8aE" secondAttribute="bottom" constant="82" id="c6E-Wa-cIw"/>
-                            <constraint firstItem="keP-KX-p0V" firstAttribute="bottom" secondItem="iQ1-vl-4dT" secondAttribute="bottom" constant="147" id="dJp-Oa-RWj"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="e4o-mA-odQ" secondAttribute="centerX" id="ixs-WG-dIu"/>
+                            <constraint firstItem="e4o-mA-odQ" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="Uf4-hR-wqi"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="e4o-mA-odQ" secondAttribute="bottom" constant="56" id="da6-gb-98f"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="TFm-4k-rcx" secondAttribute="centerX" id="fpe-ym-gac"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="rFX-ZF-8aE" secondAttribute="centerX" id="tvz-Hk-390"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="top" secondItem="rFX-ZF-8aE" secondAttribute="bottom" constant="82" id="uD2-bC-Iuv"/>
+                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="leading" secondItem="keP-KX-p0V" secondAttribute="leading" constant="20" id="vgX-8e-NYE"/>
                             <constraint firstItem="j5D-3e-T1t" firstAttribute="top" secondItem="TFm-4k-rcx" secondAttribute="top" id="ydh-fm-0bb"/>
-                            <constraint firstItem="iQ1-vl-4dT" firstAttribute="centerX" secondItem="j5D-3e-T1t" secondAttribute="centerX" id="zdN-yM-kHA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="keP-KX-p0V"/>
                     </view>

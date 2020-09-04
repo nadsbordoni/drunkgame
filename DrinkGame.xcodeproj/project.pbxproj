@@ -24,7 +24,7 @@
 		FE78296C24F96F30008A7643 /* DrinkGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE78296B24F96F30008A7643 /* DrinkGameUITests.swift */; };
 		FE78297E24F97733008A7643 /* budmo jiggler.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE78297A24F97733008A7643 /* budmo jiggler.ttf */; };
 		FE78298024F97733008A7643 /* budmo jigglish.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE78297C24F97733008A7643 /* budmo jigglish.ttf */; };
-		FE8AAAC72501CAAE00D33531 /* Market_Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE8AAAC62501CAAE00D33531 /* Market_Deco.ttf */; };
+		FEEC214E25028AA2004AF9B5 /* Market_Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FEEC214D25028AA2004AF9B5 /* Market_Deco.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		FE78296D24F96F30008A7643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE78297A24F97733008A7643 /* budmo jiggler.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "budmo jiggler.ttf"; sourceTree = "<group>"; };
 		FE78297C24F97733008A7643 /* budmo jigglish.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "budmo jigglish.ttf"; sourceTree = "<group>"; };
-		FE8AAAC62501CAAE00D33531 /* Market_Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Market_Deco.ttf; path = ../../../Downloads/Market_Deco.ttf; sourceTree = "<group>"; };
+		FEEC214D25028AA2004AF9B5 /* Market_Deco.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Market_Deco.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,7 @@
 		FE78294824F96F2E008A7643 /* DrinkGame */ = {
 			isa = PBXGroup;
 			children = (
-				FE8AAAC62501CAAE00D33531 /* Market_Deco.ttf */,
+				FEEC214C250289EB004AF9B5 /* mark */,
 				FE78297924F97733008A7643 /* budmo */,
 				FE78294924F96F2E008A7643 /* AppDelegate.swift */,
 				FE78294B24F96F2E008A7643 /* SceneDelegate.swift */,
@@ -164,6 +164,14 @@
 				FE78297C24F97733008A7643 /* budmo jigglish.ttf */,
 			);
 			path = budmo;
+			sourceTree = "<group>";
+		};
+		FEEC214C250289EB004AF9B5 /* mark */ = {
+			isa = PBXGroup;
+			children = (
+				FEEC214D25028AA2004AF9B5 /* Market_Deco.ttf */,
+			);
+			path = mark;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +282,7 @@
 				FE78295624F96F30008A7643 /* LaunchScreen.storyboard in Resources */,
 				663A839125001405002F9E8E /* backgroundMusic.mp3 in Resources */,
 				FE78295124F96F2E008A7643 /* Main.storyboard in Resources */,
-				FE8AAAC72501CAAE00D33531 /* Market_Deco.ttf in Resources */,
+				FEEC214E25028AA2004AF9B5 /* Market_Deco.ttf in Resources */,
 				FE78298024F97733008A7643 /* budmo jigglish.ttf in Resources */,
 				FE0B823024FDA4700073D146 /* Assets.xcassets in Resources */,
 			);
