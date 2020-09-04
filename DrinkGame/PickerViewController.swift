@@ -10,6 +10,7 @@ import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     //let playervc = PlayersViewController()
+    var text: String!
     var names: [String] = []
     @IBOutlet var startButtonOutlet: UIButton!
     @IBOutlet var shameButtonOutlet: UIButton!
@@ -60,7 +61,10 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         PickerActions.delegate = self
         PickerActions.dataSource = self
         //printName()
+        
+        labelName.text = text
     }
+    
     
     let vc = ViewController()
     
@@ -89,7 +93,11 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         alert.addAction(UIAlertAction(title:"OK", style: .default, handler: nil ))
         
         self.present(alert, animated: true)
+        
+//        text = playervc.playerTwo.text
     }
+    
+    let playervc = PlayersViewController()
     
     func printName() {
         //labelName.text = playervc.names[0]
