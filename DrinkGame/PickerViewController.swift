@@ -59,7 +59,7 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         PickerMusic.delegate = self
         PickerActions.delegate = self
         PickerActions.dataSource = self
-        printName()
+        //printName()
     }
     
     let vc = ViewController()

@@ -22,8 +22,8 @@
 	<true/>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Market_Deco.ttf</string>
 		<string>budmo jiggler.ttf</string>
+		<string>Market_Deco.ttf</string>
 		<string>budmo jigglish.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
